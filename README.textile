@@ -30,7 +30,7 @@ Act now and we'll throw in two view helper methods to help make it easy for you 
 
 h3. coffee_script_tag
 
-The <code>coffee_script_tag</code> helper method will compile your CoffeeScript code and place it between <code>scrip tags</code>:
+The <code>coffee_script_tag</code> helper method will compile your CoffeeScript code and place it between <code>script</code> tags:
 
 <pre><code>
 <%= coffee_script_tag do %>
