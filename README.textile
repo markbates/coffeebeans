@@ -1,0 +1,3 @@
+README
+========================================================================
+coffeescript_rails was developed by: markbates
