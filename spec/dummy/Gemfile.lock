@@ -1,7 +1,7 @@
 PATH
-  remote: ~/gemdev/coffeescript_rails
+  remote: ~/gemdev/coffeebeans
   specs:
-    coffeescript_rails (0.0.1.20110519120600)
+    coffeebeans (1.0.0.20110519132850)
       actionpack (>= 3.0.0)
       coffee-script
 
@@ -82,5 +82,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  coffeescript_rails!
+  coffeebeans!
   rails (= 3.0.7)

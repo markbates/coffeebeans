@@ -1,3 +1,75 @@
-README
-========================================================================
-coffeescript_rails was developed by: markbates
+h1. CoffeeBeans
+
+Rails 3.1 has made quite a splash with its inclusion of "CoffeeScript":http://www.coffeescript.org. I for one am very excited about being able to write JavaScript in an easier and more beautiful way. However, when CoffeeScript was added to Rails 3.1 they forgot one very important part, the ability to use it when responding to JavaScript (JS) requests!
+
+In Rails 3.1 it's incredibly easy to build your application's JavaScript using CoffeeScript, however if you fire off an AJAX request to your application you can only write your response using regular JavaScript and not CoffeeScript, at least until CoffeeBeans came along.
+
+h2. Installation
+
+Installing CoffeeBeans is simple. In your Rails 3.x project (yes, this works in Rails 3.0.x as well as Rails 3.1) add the following to your <code>Gemfile</code>:
+
+<pre><code>gem 'coffeebeans'</code></pre>
+
+Then run:
+
+<pre><code>$ bundle install</code></pre>
+
+That's it! CoffeeBeans is now installed and ready to help you make the most of CoffeeScript in your Rails app. Enjoy!
+
+h2. Usage
+
+Usage of CoffeeBeans is incredibly simple. Let's say you want to respond to a JavaScript (JS) request using CoffeeScript just name your view something like this:
+
+<pre><code>app/views/users/index.js.coffee</code></pre>
+
+That's it! You're done. Now you can use CoffeeScript (and ERB) in that file. Nothing else special to do, tweak or change.
+
+h2. But Wait, There's More!
+
+Act now and we'll throw in two view helper methods to help make it easy for you to write CoffeeScript in your views as well:
+
+h3. coffee_script_tag
+
+The <code>coffee_script_tag</code> helper method will compile your CoffeeScript code and place it between <code>scrip tags</code>:
+
+<pre><code>
+<%= coffee_script_tag do %>
+  alert 'coffee script is awesome!'
+<% end %>
+</code></pre>
+
+Will generate:
+
+<pre><code>
+<script type="text/javascript">
+  (function() {
+    alert('coffee script is awesome!');
+  }).call(this);
+</script>
+</code></pre>
+
+h3. coffee_script
+
+Alternatively, if you want to place/compile CoffeeScript between script tags that are already on your page, then you can simply use the <code>coffee_script</code> helper to do that.
+
+<pre><code>
+<script>
+  <%= coffee_script do %>
+    alert 'coffee script is really awesome!'
+  <% end %>
+</script>
+</code></pre>
+
+Will generate:
+
+<pre><code>
+<script>
+  (function() {
+    alert('coffee script is really awesome!');
+  }).call(this);
+</script>
+</code></pre>
+
+h2. Footnote
+
+I really hope that this gem doesn't have to be around too long and that the Rails team decides to actually add this into Rails proper. It seems like a no-brainer as far as I'm concerned. I did submit a "pull request":https://github.com/rails/rails/pull/1130 but it wasn't accepted because they may want to refactor the rendering system in the future. 

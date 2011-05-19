@@ -22,7 +22,7 @@ Gemstub.gem_spec do |s|
   s.add_dependency('coffee-script')
   s.add_dependency('actionpack', '>= 3.0.0')
   s.email = 'mark+github@markbates.com'
-  # s.homepage = ''
+  s.homepage = 'http://github.com/markbates/coffeebeans'
 end
 
 Gemstub.rdoc do |rd|

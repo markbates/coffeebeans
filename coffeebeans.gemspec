@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{coffeebeans}
-  s.version = "1.0.0.20110519132850"
+  s.version = "1.0.0.20110519134610"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{markbates}]
