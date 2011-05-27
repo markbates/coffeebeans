@@ -21,7 +21,7 @@ module CoffeeBeans
     end
     
     def coffee_script(&block)
-      ::CoffeeScript.compile(capture(&block))
+      ::CoffeeScript.compile(capture(&block)).html_safe
     end
     
   end

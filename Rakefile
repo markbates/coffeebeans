@@ -17,7 +17,7 @@ Bundler.require
 Gemstub.test_framework = :rspec
 
 Gemstub.gem_spec do |s|
-  s.version = '1.0.0'
+  s.version = '1.0.1'
   # s.rubyforge_project = 'coffeescript_rails'
   s.add_dependency('coffee-script')
   s.add_dependency('actionpack', '>= 3.0.0')
