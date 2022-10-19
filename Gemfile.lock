@@ -53,7 +53,7 @@ GEM
       abstract (>= 1.0.0)
     execjs (1.0.0)
       multi_json (~> 1.0)
-    ffi (1.0.8)
+    ffi (1.0.11)
     gemstub (2.0.3)
       activesupport (>= 3.0.0)
       genosaurus
@@ -72,9 +72,13 @@ GEM
     mark_facets (0.2.0)
       hashie
     mime-types (1.16)
+    mini_portile2 (2.8.0)
     multi_json (1.0.2)
-    nokogiri (1.4.4)
+    nokogiri (1.13.9)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     polyglot (0.3.1)
+    racc (1.6.0)
     rack (1.2.2)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
